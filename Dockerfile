@@ -13,6 +13,6 @@ RUN cat action.d/iptables-allports_extension.conf >> action.d/iptables-allports.
 RUN rm action.d/iptables-allports_extension.conf
 
 # Run startup-script
-ENTRYPOINT ["/usr/bin/dumb-init", "--"]
-CMD ["/start.sh"]
+#ENTRYPOINT ["/usr/bin/dumb-init", "--"]
+#CMD ["/start.sh"]
 
