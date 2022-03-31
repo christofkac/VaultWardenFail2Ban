@@ -13,6 +13,7 @@ COPY action.d /etc/fail2ban/action.d/
 RUN cat /etc/fail2ban/action.d/iptables-allports_extension.conf >> /etc/fail2ban/action.d/iptables-allports.conf
 RUN rm /etc/fail2ban/action.d/iptables-allports_extension.conf
 RUN rm /etc/fail2ban/jail.d/defaults-debian.conf
+CMD service fail2ban start
 #
 # Run startup-script
 #ENTRYPOINT ["/usr/bin/dumb-init", "--"]
