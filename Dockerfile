@@ -10,7 +10,7 @@ RUN apt-get update \
 COPY jail.d /etc/fail2ban/jail.d/
 COPY filter.d /etc/fail2ban/filter.d/
 COPY action.d /etc/fail2ban/action.d/
-COPY startFail2Ban.sh /tmp/
+COPY startFail2Ban.sh /home/gotenberg/
 RUN cat /etc/fail2ban/action.d/iptables-allports_extension.conf >> /etc/fail2ban/action.d/iptables-allports.conf
 RUN rm /etc/fail2ban/action.d/iptables-allports_extension.conf
 RUN rm /etc/fail2ban/jail.d/defaults-debian.conf
